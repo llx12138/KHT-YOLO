@@ -30,3 +30,55 @@ From the scatter plots, it can be observed that YOLO11n, YOLO11n combined with t
 This study presents a semi-supervised framework for temporal key frame annotation in CPR videos, named KHT-YOLO, which is based on OpenCV, YOLO11, an optimized Kalman filter, and the Hungarian algorithm. Designed for semi-supervised object detection and annotation in cardiopulmonary resuscitation (CPR) assessment videos, this is the first application of YOLO11 in CPR assessment, enabling large-scale key frame object detection with minimal manual annotation. Experimental results indicate that KHT-YOLO outperforms YOLO11 (YL11n) and its Kalman-filter-combined variant (YKH) across precision, F1 score, recall, IoU, and mAP50 metrics. In the Dummy task, KHT-YOLO achieved a precision of 0.999, with an average precision of 0.973, representing improvements of 2.2% and 2.7% over YL11n and YKH, respectively. Notably, KHT-YOLO demonstrated superior robustness in complex occlusion scenarios, such as in the D-H-occlusion task, where it attained an IoU of 0.748.
 
 In the future, this research will expand the CPR training dataset using this method and incorporate a detection module to monitor the frequency and depth of chest compressions and artificial respirations while assessing students’ performance.
+
+## Project Directory Structure
+
+The project is organized into several directories to facilitate development, testing, and deployment of the CPR detection system using the KHT-YOLO methodology. Below is a detailed explanation of each directory and its contents:
+
+### `code`
+This directory contains the main codebase of the project. It includes scripts and modules essential for running the CPR detection system.
+
+- **`CPRDetection`**: 
+  - **Core Implementation of KHT-YOLO**
+  - **Files:**
+    - `Compare_s.py`: Script for comparing different aspects or results.
+    - `EvaluatingIndicator1.py`: File for evaluating specific indicators or metrics relevant to the CPR detection system.
+    - `K_H.py`: Implements the Kalman filter (`K`) and Hungarian algorithm (`H`).
+    - `YOLO+IOU7.py`: Main function or script implementing the YOLO model enhanced with IOU (Intersection over Union) calculations, possibly version 7.
+  - **Subdirectories:**
+    - `docker`: Docker-related configurations or scripts for containerized deployment.
+    - `docs`: Documentation files, including guides, manuals, or API documentation.
+    - `examples`: Example usage cases or sample inputs/outputs demonstrating how the system works.
+    - `tests`: Test cases and scripts to ensure the functionality and reliability of the codebase.
+    - `ultralytics`: Additional tools or libraries related to deep learning frameworks like Ultralytics' YOLO11.
+
+### `data`
+This directory stores the processed data and results generated during the execution of the program.
+
+- **Subdirectories:**
+  - `iou/preimages-yolo-240-i...`: Contains preprocessed images ready for input into the YOLO model, with dimensions adjusted to 240 pixels.
+  - `KHT-YOLO_PERSION_2024110...`: Results or datasets associated with the KHT-YOLO model.
+  - `YOLO11n+K+H_PERSION_202...`: Results or datasets associated with the YOLO11n model combined with the Kalman filter and Hungarian algorithm.
+  - `YOLO11n_KHT_202411051659...`: Results or datasets associated with the YOLO11n model enhanced with KHT.
+  - `YOLO11n_PERSION_20241105...`: Results or datasets associated with the YOLO11n model.
+
+### `datasets`
+This directory contains the raw and processed datasets used for training and validating the CPR detection system.
+
+- **Subdirectories:**
+  - `raw`: Raw data collected from CPR training videos.
+  - `processed`: Processed data ready for model training and validation.
+  - `annotations`: Manually annotated key frames and feature points.
+
+### `LICENSE`
+Legal document outlining the licensing terms under which the software is distributed.
+
+### `CITATION.cff`
+Citation file providing information about how to cite the project if used in academic work.
+
+### `README.md`
+A markdown file containing an overview of the project, installation instructions, and usage examples.
+
+---
+
+This structure ensures a clear and organized approach to developing, testing, and deploying the CPR detection system, making it easier for developers and researchers to navigate and contribute to the project.
