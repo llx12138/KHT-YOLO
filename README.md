@@ -44,7 +44,7 @@ This directory contains the main codebase of the project. It includes scripts an
     - `Compare_s.py`: Script for comparing different aspects or results.
     - `EvaluatingIndicator1.py`: File for evaluating specific indicators or metrics relevant to the CPR detection system.
     - `K_H.py`: Implements the Kalman filter (`K`) and Hungarian algorithm (`H`).
-    - `YOLO+IOU7.py`: Main function or script implementing the YOLO model enhanced with IOU (Intersection over Union) calculations, possibly version 7.
+    - `YOLO+IOU.py`: Main function or script implementing the YOLO model enhanced with IOU calculations, possibly version 7.
   - **Subdirectories:**
     - `docker`: Docker-related configurations or scripts for containerized deployment.
     - `docs`: Documentation files, including guides, manuals, or API documentation.
